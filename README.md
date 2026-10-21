@@ -4,6 +4,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.14+-ee4c2c.svg)
 ![Weights & Biases](https://img.shields.io/badge/Tracked_by-W&B-orange.svg)
 ![Hardware](https://img.shields.io/badge/Hardware-Apple_Silicon_(MPS)-lightgrey.svg)
+![uv](https://img.shields.io/badge/uv-fast_package_manager-purple)
 
 ## 1. Abstract & Objective
 This project implements an automated, human-out-of-the-loop prompting pipeline for Meta's Segment Anything Model (SAM). The primary objective is to achieve zero-shot segmentation of geometric shapes by bridging the interpretability maps of a custom classifier with SAM's point-prompting mechanism. 
@@ -64,7 +65,7 @@ This project uses `uv` for reproducible environment management and is compiled f
 
 ```bash
 # Clone the repository and sync dependencies
-git clone [https://github.com/Pavelpuff/sam-automated-prompting.git](https://github.com/Pavelpuff/sam-automated-prompting.git)
+git clone https://github.com/Pavelpuff/sam-automated-prompting.git
 cd sam-automated-prompting
 make setup
 
