@@ -1,0 +1,43 @@
+[project]
+name = "sam-automated-prompting"
+version = "0.1.0"
+description = "Automated SAM Prompting via Grad-CAM for zero-shot shape segmentation"
+readme = "README.md"
+requires-python = ">=3.14"
+
+dependencies = [
+    "matplotlib>=3.8.0",
+    "numpy>=2.5.4",
+    "opencv-python-headless>=5.0.0.93",
+    "pillow>=13.0.0",
+    "scipy>=1.18.1",
+    "segment-anything>=1.0",
+    "torch>=2.14.1",
+    "torchvision>=0.29.1",
+    "tqdm>=4.70.1",
+    "wandb>=0.31.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff>=0.3.0",
+    "pytest>=8.0.0",
+    "mypy>=1.8.0",
+    "jupyter>=1.0.0"
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# E: pycodestyle, F: pyflakes, I: isort, UP: pyupgrade
+select = ["E", "F", "I", "UP"]
+ignore = []
+
+[tool.mypy]
+ignore_missing_imports = true
+strict = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
